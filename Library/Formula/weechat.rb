@@ -46,9 +46,9 @@ class Weechat < Formula
       -DENABLE_GTK=OFF
     ]
     args << '-DENABLE_LUA=OFF'    unless build.include? 'lua'
-    args << '-DENABLE_PERL=OFF'   unless build.include? 'perl'
+    args << '-DENABLE_PERL=ON'   unless build.include? 'perl'
     args << '-DENABLE_RUBY=OFF'   unless build.include? 'ruby'
-    args << '-DENABLE_PYTHON=OFF' unless build.include? 'python'
+    args << '-DENABLE_PYTHON=ON' unless build.include? 'python'
     args << '-DENABLE_ASPELL=OFF' unless build.include? 'aspell'
     args << '-DENABLE_GUILE=OFF'  unless build.include? 'guile' and \
                                          Formula.factory('guile').linked_keg.exist?
